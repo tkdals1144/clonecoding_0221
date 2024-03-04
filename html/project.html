@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숨고:숨은고수-1000만명이 선택한 전국민 생활 솔루션</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <script defer src="../javascript/project.js"></script>
 </head>
 <body>
     <!-- header가 화면 상단에 고정되도록 처리해야함 -->
@@ -11,7 +13,7 @@
         <!-- flex처리하면 되려나 -->
         <div class="header-class">
             <!-- 로고가 들어갈 자리 -->
-            <img src=""/>
+            <div><img id="logo" src="https://assets.cdn.soomgo.com/icons/logo/navigation_logo.svg"/></div>
             <nav>
                 <!-- flex처리하면 될듯 -->
                 <ul class="header-ul">
@@ -23,13 +25,18 @@
                 </ul>
             </nav>
             <!-- input안에 이미지를 박을 방법에 대해 알아봐야 할듯 -->
-            <input id="header-input" type="text" placeholder="어떤 서비스가 필요하세요?"/>
+            <div id="input-div">
+                <div>
+                    <img id="glass-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLXdpZHRoPSIxLjYiPgogICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjYuNSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Im0xMS41IDExLjUgNSA1Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                </div>
+                <input id="header-input" type="text" placeholder="어떤 서비스가 필요하세요?"/>
+            </div>
             <nav>
                 <!-- 당장 flex처리 외에는 크게 처리할게 보이지 않으니 일단 class로 사용해보자 -->
                 <ul class="header-ul">
                     <!-- 여기도 똑같이 list-style을 none으로 처리하자 -->
-                    <li class="header_list2">로그인</li>
-                    <li class="header_list2">회원가입</li>
+                    <li class="header_list2"><a href="">로그인</a></li>
+                    <li class="header_list2"><a href="">회원가입</a></li>
                 </ul>
             </nav>
             <!-- button에서 모서리 부분을 깍아 처리하면 될듯. 아마 border-radius였나? -->
@@ -37,7 +44,370 @@
         </div>
     </header>
     <main>
-
+        <div class="main-div">
+            <div class="banner-class">
+                <div class="slide-wrap">
+                    <ul class="slide-box">
+                        <li class="slide-li">
+                            <div class="slide-img">
+                                <img id="banner-img" src="https://static.cdn.soomgo.com/upload/banner/5627b8e2-6792-4d79-837a-b2dfd63568d7.png?w=1940&webp=1">
+                            </div>
+                        </li>
+                        <li class="slide-li">
+                            <div class="slide-img"></div>
+                        </li>
+                        <li class="slide-li">
+                            <div class="slide-img"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="img-click-div">
+                <ul class="img-ul">
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/0a9a3bf9-4ce6-4968-8090-5bfcf1164bcb.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">이사/수리</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/e4d5703c-b00a-4bc6-89c7-7974a1dcc5c0.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">설치/수리</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/6f901591-4786-4433-a60b-c0c5834408bb.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">인테리어</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/09761ce6-dcff-438c-90f8-5b332e64a2ad.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">외주</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/44894f45-0d19-407e-aa34-fc81bcfb89a5.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">이벤트/뷰티</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/f676b79f-04aa-4da4-ac35-588acf733023.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">취업/직무</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/800bf71e-8204-4ff7-bb28-04000f385bcd.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">과외</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/13513f83-e282-41ee-9677-e72bd5832e82.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">취미/자기계발</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/eca6bc22-7b6f-4d5b-8a2e-83fb5577341c.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">자동차</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/89522c85-5923-4cda-8019-797c00faad37.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">법률/금융</p>
+                    </div>
+                    <div class="img-list-class">
+                        <li class="img-list">
+                            <div class="img-wrapper-class">
+                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/25f0e364-93ad-4d49-b710-3a2f073dc547.svg"><br>
+                            </div>
+                        </li>
+                        <p class="img-p-class">기타</p>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="main2-div">
+            <div class="main2-wrap">
+                <h2>숨고 인기 서비스</h2>
+                <div class="slide2-box">
+                    <ul class="slide2-ul">
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/e83966e9-77de-452c-a188-1e14d07eaee2.png?h=302&w=458&webp=1">
+                                <p class="slide2-p">피아노/키보드 레슨</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/edfc1261-a293-4875-8024-99032b98daa5.png?h=302&w=458&webp=1">
+                                <p class="slide2-p">골프 레슨</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/6a497fde-2ba4-4a59-977c-41ce3be83e08.png?h=302&w=458&webp=1">
+                                <p class="slide2-p">퍼스널트레이닝(PT)</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/85e81b4b-4b9e-4b45-b9ac-950a342788bc.png?h=302&w=458&webp=1">
+                                <p class="slide2-p">보컬 레슨</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="">
+                                <p class="slide2-p">피아노/키보드 레슨</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="">
+                                <p class="slide2-p">피아노/키보드 레슨</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="">
+                                <p class="slide2-p">피아노/키보드 레슨</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide2-li">
+                            <div class="slide2-contents">
+                                <img class="slide2-img" src="">
+                                <p class="slide2-p">피아노/키보드 레슨</p>
+                                <div class="slide2-small-contents">
+                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                    <span class="slide2-small-span">232,740명 요청</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main3-div"> <!-- 이걸 큰 틀로써 잡고 중앙정렬해야함 -->
+            <div class="main3-wrap"> <!-- div의 크기과 margin값 설정 -->
+                <h2>숨은 고수를 발견했어요</h2>
+                <div class="main3-box"> <!-- flex처리를 통해 내부 컨텐츠 정렬 -->
+                    <div class="main3-contents"> <!-- 내부의 컨텐츠 박스 -->
+                        <div class="contents-info"> <!-- 내부의 이미지, 텍스트 div, 이미지를 flex 정렬처리 -->
+                            <img class="info-img" src="https://static.cdn.soomgo.com/upload/profile/ae6fecc6-8448-46a2-9c7b-caf3d4705d1b.jpg?webp=1&h=96&w=96">
+                            <div class="info-text">
+                                <div class="info-name">남수현</div>
+                                <div class="info-explain">피부 관리</div>
+                            </div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8491 11.9203C17.8482 11.7052 17.7549 11.5008 17.593 11.3591L7.39508 2.43559C7.08336 2.16282 6.60954 2.1944 6.33677 2.50612C6.064 2.81785 6.09558 3.29167 6.40731 3.56443L15.9657 11.9283L6.40257 20.4398C6.09315 20.7152 6.06557 21.1892 6.34096 21.4986C6.61634 21.8081 7.09042 21.8356 7.39983 21.5602L17.5978 12.4837C17.7585 12.3407 17.85 12.1355 17.8491 11.9203Z" fill="black"></path>
+                            </svg>
+                        </div>
+                        <hr>
+                        <div class="main3-contents2"> <!-- 내부의 이미지, 숫자 flex 정렬-->
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            5.0
+                        </div>
+                        <div class="main3-text">
+                            굉장히 친절하고 세심하게 해주셔서 만족스럽습니다.
+                        </div>
+                        <div class="contents-last">
+                            신** 고객님의 후기
+                        </div>
+                    </div>
+                    <div class="main3-contents"> <!-- 내부의 컨텐츠 박스 -->
+                        <div class="contents-info"> <!-- 내부의 이미지, 텍스트 div, 이미지를 flex 정렬처리 -->
+                            <img class="info-img" src="https://static.cdn.soomgo.com/upload/profile/a6c7da12-bb19-40d4-9582-4b30ff63164b.jpg?webp=1&h=96&w=96">
+                            <div class="info-text">
+                                <div class="info-name">세현디자인</div>
+                                <div class="info-explain">주택 건축</div>
+                            </div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8491 11.9203C17.8482 11.7052 17.7549 11.5008 17.593 11.3591L7.39508 2.43559C7.08336 2.16282 6.60954 2.1944 6.33677 2.50612C6.064 2.81785 6.09558 3.29167 6.40731 3.56443L15.9657 11.9283L6.40257 20.4398C6.09315 20.7152 6.06557 21.1892 6.34096 21.4986C6.61634 21.8081 7.09042 21.8356 7.39983 21.5602L17.5978 12.4837C17.7585 12.3407 17.85 12.1355 17.8491 11.9203Z" fill="black"></path>
+                            </svg>
+                        </div>
+                        <hr>
+                        <div class="main3-contents2"> <!-- 내부의 이미지, 숫자 flex 정렬-->
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            <img class="star-img" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg">
+                            5.0
+                        </div>
+                        <div class="main3-text">
+                            편하고 꼼꼼하게 잘해주셨어요.
+                        </div>
+                        <div class="contents-last">
+                            김** 고객님의 후기
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main4-div">
+            <div class="main4-wrap">
+                <div class="main4-title-wrap">
+                    <h2>숨고 커뮤니티에 물어보세요</h2>
+                    <span class="main4-title-span">전체보기</span>
+                    <img class="main4-title-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                </div>
+                <div class="main4-box"> <!-- flex처리할것 -->
+                    <div class="contents-box1">
+                        <div class="contents-wrap1"> <!-- flex처리할것 -->
+                            <div class="contents-text">
+                                <p class="contents-text-p">숨고이야기</p>
+                                <p class="contents-text-title">EP03 댄스스포츠 레슨 조소휘 고수 🔭</p>
+                                <p class="contents-text-explain">본업 천재 라틴 디바 댄스스포츠 레슨 조소휘 고수 '밝을 소... </p>
+                                <div class="contents-small-wrap"> <!-- flex처리 -->
+                                    <div class="view-wrap">
+                                        <div class="small-view"></div>
+                                        <div class="view-num">1834</div>
+                                    </div>
+                                    <div class="comment-wrap">
+                                        <div class="small-comment"></div>
+                                        <div class="comment-num">4</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="img-wrap">
+                                <img class="contents-img" src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ef139e1e-3d70-4abc-bacd-cade72f7c896.png?h=128&w=128&webp=1">
+                            </div>
+                        </div>
+                        <hr class="hr-class">
+                        <div class="contents-wrap1"> <!-- flex처리할것 -->
+                            <div class="contents-text">
+                                <p class="contents-text-p">궁금해요</p>
+                                <p class="contents-text-title">도배하고 마루 시공시 어떤거먼저 해야되나요</p>
+                                <p class="contents-text-explain">도배랑 마루 하고 입주할려는데요. 어느거 먼저해야되나요?..</p>
+                                <div class="contents-small-wrap"> <!-- flex처리 -->
+                                    <div class="view-wrap">
+                                        <div class="small-view"></div>
+                                        <div class="view-num">562</div>
+                                    </div>
+                                    <div class="comment-wrap">
+                                        <div class="small-comment"></div>
+                                        <div class="comment-num">66</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hr-class">
+                        <div class="contents-wrap1"> <!-- flex처리할것 -->
+                            <div class="contents-text">
+                                <p class="contents-text-p">얼마예요</p>
+                                <p class="contents-text-title">첫차로 탑차 샀는데 승용차랑 달라서 긁었어요ㅠㅠ</p>
+                                <p class="contents-text-explain">그냥 타고다닐지 견적 얼마 안나오면 수리할지 고민하고있어요</p>
+                                <div class="contents-small-wrap"> <!-- flex처리 -->
+                                    <div class="view-wrap">
+                                        <div class="small-view"></div>
+                                        <div class="view-num">600</div>
+                                    </div>
+                                    <div class="comment-wrap">
+                                        <div class="small-comment"></div>
+                                        <div class="comment-num">77</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="img-wrap">
+                                <img class="contents-img" src="https://static.cdn.soomgo.com/upload/media/0c0ba93d-e82c-4be6-adf1-a625a6c8c781.jpg?h=128&w=128&webp=1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contents-box2">
+                        <div class="contents-wrap2"> <!-- flex처리할것 -->
+                            <div class="img-wrap2">
+                                <img class="contents-img2" src="https://static.cdn.soomgo.com/upload/community/7542d456-8f56-45a8-b085-fb6fddab2b9c.png?h=320&w=480&webp=1">
+                            </div>
+                            <div class="contents-text-wrap">
+                                <div class="contents-text2">
+                                    <p class="contents-text-p2">블로그 마케팅</p>
+                                    <p class="contents-text-title2">블로그 스킨 하기전엔 중요한지 몰랐죠</p>
+                                    <p class="contents-text-explain2">봄리에뜨</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents-wrap2"> <!-- flex처리할것 -->
+                            <div class="img-wrap2">
+                                <img class="contents-img2" src="https://static.cdn.soomgo.com/upload/community/796daf07-191b-4a26-94b4-41e672554ae2.jpg?h=320&w=480&webp=1">
+                            </div>
+                            <div class="contents-text-wrap">
+                                <div class="contents-text2">
+                                    <p class="contents-text-p2">영어 과외</p>
+                                    <p class="contents-text-title2">흔들리지않는 영어패턴 익히기</p>
+                                    <p class="contents-text-explain2">장희순</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main5-div">
+            <div class="banner-wrap">
+                <img class="banner-img2" src="">
+            </div>
+        </div>
     </main>
     <footer>
         <!-- 각 footer-class의 크기를 동등하게 처리 -->
