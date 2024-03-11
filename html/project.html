@@ -6,6 +6,7 @@
     <title>숨고:숨은고수-1000만명이 선택한 전국민 생활 솔루션</title>
     <link rel="stylesheet" href="../css/project.css">
     <script defer src="../javascript/project.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- header가 화면 상단에 고정되도록 처리해야함 -->
@@ -13,15 +14,15 @@
         <!-- flex처리하면 되려나 -->
         <div class="header-class">
             <!-- 로고가 들어갈 자리 -->
-            <div><img id="logo" src="https://assets.cdn.soomgo.com/icons/logo/navigation_logo.svg"/></div>
+            <div><a href=""><img id="logo" src="https://assets.cdn.soomgo.com/icons/logo/navigation_logo.svg"/></a></div>
             <nav>
                 <!-- flex처리하면 될듯 -->
                 <ul class="header-ul">
                     <!-- 각 list의 style을 none으로 처리 -->
-                    <li class="header_list"><a href="">견적요청</a></li>
-                    <li class="header_list"><a href="">고수찾기</a></li>
-                    <li class="header_list"><a href="">마켓</a></li>
-                    <li class="header_list"><a href="">커뮤니티</a></li>
+                    <li class="header_list"><a href="https://soomgo.com/category-home">견적요청</a></li>
+                    <li class="header_list"><a href="https://soomgo.com/search/pro/review_count">고수찾기</a></li>
+                    <li class="header_list"><a href="https://soomgo.com/market/">마켓</a></li>
+                    <li class="header_list"><a href="https://soomgo.com/community/soomgo-life/all">커뮤니티</a></li>
                 </ul>
             </nav>
             <!-- input안에 이미지를 박을 방법에 대해 알아봐야 할듯 -->
@@ -30,6 +31,16 @@
                     <img id="glass-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLXdpZHRoPSIxLjYiPgogICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjYuNSIvPgogICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Im0xMS41IDExLjUgNSA1Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
                 </div>
                 <input id="header-input" type="text" placeholder="어떤 서비스가 필요하세요?"/>
+                <div id="search-results">
+                    <div class="search-item">피아노/키보드 레슨</div>
+                    <div class="search-item">골프 레슨</div>
+                    <div class="search-item">퍼스널트레이닝(PT)</div>
+                    <div class="search-item">보컬 레슨</div>
+                    <div class="search-item">수학 과외</div>
+                    <div class="search-item">에어컨 설치 및 수리</div>
+                    <div class="search-item">문 설치 및 수리</div>
+                    <div class="search-item">수도 관련 설치 및 수리</div>
+                </div>
             </div>
             <nav>
                 <!-- 당장 flex처리 외에는 크게 처리할게 보이지 않으니 일단 class로 사용해보자 -->
@@ -40,7 +51,7 @@
                 </ul>
             </nav>
             <!-- button에서 모서리 부분을 깍아 처리하면 될듯. 아마 border-radius였나? -->
-            <button type="button" id="header_button">고수가입</button>
+            <button type="button" id="header_button"><a href="https://soomgo.com/pro?entry_point=signup_cta">고수가입</button>
         </div>
     </header>
     <main>
@@ -50,107 +61,146 @@
                     <ul class="slide-box">
                         <li class="slide-li">
                             <div class="slide-img">
-                                <img id="banner-img" src="https://static.cdn.soomgo.com/upload/banner/5627b8e2-6792-4d79-837a-b2dfd63568d7.png?w=1940&webp=1">
+                                <a href="https://soomgo.com/event/701"><img class="banner-img" src="https://static.cdn.soomgo.com/upload/banner/92cfd47f-2f0a-48b0-86e6-5e3515463d7a.png?w=1940&webp=1"></a>
                             </div>
                         </li>
                         <li class="slide-li">
-                            <div class="slide-img"></div>
+                            <div class="slide-img">
+                                <a href="https://soomgo.com/curations/8c0b0800-acd8-11ed-b4c6-f57049c3b7a1"><img class="banner-img" src="https://static.cdn.soomgo.com/upload/banner/8a9d2fb8-a4eb-4603-9646-75f8bcd7e1d9.png?w=1940&webp=1"></a>
+                            </div>
                         </li>
                         <li class="slide-li">
-                            <div class="slide-img"></div>
+                            <div class="slide-img">
+                                <a href="https://soomgoletter.stibee.com/"><img class="banner-img" src="https://static.cdn.soomgo.com/upload/banner/31497f4b-3972-4f76-9d28-d906ef15f05f.png?w=1940&webp=1"></a>
+                            </div>
+                        </li>
+                        <li class="slide-li">
+                            <div class="slide-img">
+                                <a href="https://soomgo.com/event/673"><img class="banner-img" src="https://static.cdn.soomgo.com/upload/banner/38838747-5a3b-4a2f-ba28-96999dc7c51f.png?w=1940&webp=1"></a>
+                            </div>
+                        </li>
+                        <li class="slide-li">
+                            <div class="slide-img">
+                                <a href="https://soomgo.com/event/632"><img class="banner-img" src="https://static.cdn.soomgo.com/upload/banner/5627b8e2-6792-4d79-837a-b2dfd63568d7.png?w=1940&webp=1"></a>
+                            </div>
                         </li>
                     </ul>
+                    <div class="prev"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTE0IDE5LTctNyA3LTciLz4KICAgIDwvZz4KPC9zdmc+Cg=="></div>
+                    <div class="next"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEwIDE5IDctNy03LTciLz4KICAgIDwvZz4KPC9zdmc+Cg=="></div>
+                    <div class="indicator"></div>
                 </div>
             </div>
             <div id="img-click-div">
                 <ul class="img-ul">
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/0a9a3bf9-4ce6-4968-8090-5bfcf1164bcb.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">이사/수리</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%9D%B4%EC%82%AC-%EC%B2%AD%EC%86%8CA?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/0a9a3bf9-4ce6-4968-8090-5bfcf1164bcb.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">이사/수리</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/e4d5703c-b00a-4bc6-89c7-7974a1dcc5c0.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">설치/수리</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%ACA?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/e4d5703c-b00a-4bc6-89c7-7974a1dcc5c0.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">설치/수리</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/6f901591-4786-4433-a60b-c0c5834408bb.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">인테리어</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4A?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/6f901591-4786-4433-a60b-c0c5834408bb.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">인테리어</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/09761ce6-dcff-438c-90f8-5b332e64a2ad.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">외주</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%99%B8%EC%A3%BCA?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/09761ce6-dcff-438c-90f8-5b332e64a2ad.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">외주</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/44894f45-0d19-407e-aa34-fc81bcfb89a5.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">이벤트/뷰티</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B7%B0%ED%8B%B0A?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/44894f45-0d19-407e-aa34-fc81bcfb89a5.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">이벤트/뷰티</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/f676b79f-04aa-4da4-ac35-588acf733023.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">취업/직무</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%B7%A8%EC%97%85-%EC%A7%81%EB%AC%B4A?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/f676b79f-04aa-4da4-ac35-588acf733023.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">취업/직무</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/800bf71e-8204-4ff7-bb28-04000f385bcd.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">과외</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EA%B3%BC%EC%99%B8A?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/800bf71e-8204-4ff7-bb28-04000f385bcd.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">과외</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/13513f83-e282-41ee-9677-e72bd5832e82.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">취미/자기계발</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%B7%A8%EB%AF%B8-%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9CA?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/13513f83-e282-41ee-9677-e72bd5832e82.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">취미/자기계발</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/eca6bc22-7b6f-4d5b-8a2e-83fb5577341c.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">자동차</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EC%9E%90%EB%8F%99%EC%B0%A8A?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/eca6bc22-7b6f-4d5b-8a2e-83fb5577341c.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">자동차</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/89522c85-5923-4cda-8019-797c00faad37.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">법률/금융</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EB%B2%95%EB%A5%A0-%EA%B8%88%EC%9C%B5A?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/89522c85-5923-4cda-8019-797c00faad37.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">법률/금융</p>
+                        </a>
                     </div>
                     <div class="img-list-class">
-                        <li class="img-list">
-                            <div class="img-wrapper-class">
-                                <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/25f0e364-93ad-4d49-b710-3a2f073dc547.svg"><br>
-                            </div>
-                        </li>
-                        <p class="img-p-class">기타</p>
+                        <a class="img-list-a" href="https://soomgo.com/%EA%B8%B0%ED%83%80A?from=main">
+                            <li class="img-list">
+                                <div class="img-wrapper-class">
+                                    <img class="img-class" src="https://dmmj3ljielax6.cloudfront.net/upload/requestForm/25f0e364-93ad-4d49-b710-3a2f073dc547.svg"><br>
+                                </div>
+                            </li>
+                            <p class="img-p-class">기타</p>
+                        </a>
                     </div>
                 </ul>
             </div>
@@ -158,89 +208,93 @@
         <div class="main2-div">
             <div class="main2-wrap">
                 <h2>숨고 인기 서비스</h2>
-                <div class="slide2-box">
-                    <ul class="slide2-ul">
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/e83966e9-77de-452c-a188-1e14d07eaee2.png?h=302&w=458&webp=1">
-                                <p class="slide2-p">피아노/키보드 레슨</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/edfc1261-a293-4875-8024-99032b98daa5.png?h=302&w=458&webp=1">
-                                <p class="slide2-p">골프 레슨</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/6a497fde-2ba4-4a59-977c-41ce3be83e08.png?h=302&w=458&webp=1">
-                                <p class="slide2-p">퍼스널트레이닝(PT)</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/85e81b4b-4b9e-4b45-b9ac-950a342788bc.png?h=302&w=458&webp=1">
-                                <p class="slide2-p">보컬 레슨</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="">
-                                <p class="slide2-p">피아노/키보드 레슨</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="">
-                                <p class="slide2-p">피아노/키보드 레슨</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="">
-                                <p class="slide2-p">피아노/키보드 레슨</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="slide2-li">
-                            <div class="slide2-contents">
-                                <img class="slide2-img" src="">
-                                <p class="slide2-p">피아노/키보드 레슨</p>
-                                <div class="slide2-small-contents">
-                                    <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
-                                    <span class="slide2-small-span">232,740명 요청</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="box-box">
+                    <div class="slide2-box">
+                        <ul class="slide2-ul">
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/e83966e9-77de-452c-a188-1e14d07eaee2.png?h=302&w=458&webp=1">
+                                    <p class="slide2-p">피아노/키보드 레슨</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/edfc1261-a293-4875-8024-99032b98daa5.png?h=302&w=458&webp=1">
+                                    <p class="slide2-p">골프 레슨</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/6a497fde-2ba4-4a59-977c-41ce3be83e08.png?h=302&w=458&webp=1">
+                                    <p class="slide2-p">퍼스널트레이닝(PT)</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/85e81b4b-4b9e-4b45-b9ac-950a342788bc.png?h=302&w=458&webp=1">
+                                    <p class="slide2-p">보컬 레슨</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/95b493f1-8ef3-43a2-b8bb-e9bfda642968.png?h=302&w=458&webp=1">
+                                    <p class="slide2-p">수학 과외</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/718adb73-9adf-4a47-a9f2-7b1f3186026e.png?h=302&w=458&webp=1">
+                                    <p class="slide2-p">에어컨 설치 및 수리</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/featured_service_9533951a-57bd-4622-b65a-f8866819be6b.jpg?h=302&w=458&webp=1">
+                                    <p class="slide2-p">문 설치 및 수리</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                            <li class="slide2-li"><a href="">
+                                <div class="slide2-contents">
+                                    <img class="slide2-img" src="https://dmmj3ljielax6.cloudfront.net/upload/service/featured_service_50de53e6-8c82-4d7b-a9db-aff280606228.jpg?h=302&w=458&webp=1">
+                                    <p class="slide2-p">수도 관련 설치 및 수리</p>
+                                    <div class="slide2-small-contents">
+                                        <img class="slide2-small-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMykiPgogICAgICAgICAgICA8cmVjdCBmaWxsPSIjQzVDNUM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHJ4PSIxIi8+CiAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTEyIDIuNS01IDMtNS0zIi8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
+                                        <span class="slide2-small-span">232,740명 요청</span>
+                                    </div>
+                                </div></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="prevbutton"></button>
+                    <button type="button" class="nextbutton"></button>
                 </div>
             </div>
         </div>
@@ -443,22 +497,69 @@
                     <span class="main4-title-span">전체보기</span>
                     <img class="main4-title-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNTMuMDAwMDAwLCAtMjAyLjAwMDAwMCkgdHJhbnNsYXRlKDQ4NS4wMDAwMDAsIDE4OC4wMDAwMDApIHRyYW5zbGF0ZSg1NjguMDAwMDAwLCAxNC4wMDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTEgMTNMNiA4IDExIDMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDUzLjAwMDAwMCwgLTIwMi4wMDAwMDApIHRyYW5zbGF0ZSg0ODUuMDAwMDAwLCAxODguMDAwMDAwKSB0cmFuc2xhdGUoNTY4LjAwMDAwMCwgMTQuMDAwMDAwKSB0cmFuc2xhdGUoOC41MDAwMDAsIDguMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04LjUwMDAwMCwgLTguMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K">
                 </div>
-                <div class="img-slider">
-                    <div class="div-slide">
-                        <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ef139e1e-3d70-4abc-bacd-cade72f7c896.png?h=552&w=738&webp=1"
-                        lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ef139e1e-3d70-4abc-bacd-cade72f7c896.png?h=552&w=738&webp=1&quot;);">
-                        <p class="slide-p">EP03 댄스스포츠 레슨 조소휘 고수 🔭</p>
+                <div class="box-box2">
+                    <div class="img-slider">
+                        <ul class="slide3-box">
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ef139e1e-3d70-4abc-bacd-cade72f7c896.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ef139e1e-3d70-4abc-bacd-cade72f7c896.png?h=552&w=738&webp=1&quot;);">
+                                    <p class="slide-p">EP03 댄스스포츠 레슨 조소휘 고수 🔭</p>
+                                </div>
+                            </li>
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ca0653a5-2d88-4506-ab08-4240e655ab20.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ca0653a5-2d88-4506-ab08-4240e655ab20.png?h=552&w=738&webp=1&quot;);">
+                                    <p class="slide-p">EP10 이사 청소하러 다녀오겠숨니다👋</p>
+                                </div>
+                            </li>
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1&quot;);">
+                                    <p class="slide-p">EP09 베이킹 레슨하러 다녀오겠숨니다👋</p>
+                                </div>
+                            </li>
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/49b5fe9f-b95d-4d99-93de-1fa65fda9abe.png?h=552&w=738&webp=1);">
+                                    <p class="slide-p">EP02 OPIc과외 정희훈 고수🔭</p>
+                                </div>
+                            </li>
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/191e3b5e-93e2-4743-8929-998090a590e1.png?h=552&w=738&webp=1);">
+                                    <p class="slide-p">EP08 와인 레슨하러 다녀오겠숨니다👋</p>
+                                </div>
+                            </li>
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/dd5afca2-8f53-4f6c-807d-90abd7be82be.png?h=552&w=738&webp=1);">
+                                    <p class="slide-p">EP01 수제악기 제작 김병철 고수 🔭</p>
+                                </div>
+                            </li>
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/9a68a3ba-3349-40e3-9082-974adf989728.png?h=552&w=738&webp=1);">
+                                    <p class="slide-p">EP07 모델 레슨하러 다녀오겠숨니다👋</p>
+                                </div>
+                            </li>
+                            <li class="slide3-img">
+                                <div class="div-slide">
+                                    <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1"
+                                    lazy="loaded" style="background-image: url(https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/9974532a-d69e-46d2-adcb-3e267ee32930.png?h=552&w=738&webp=1);">
+                                    <p class="slide-p">EP06 벌초하러 다녀오겠숨니다👋</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="div-slide">
-                        <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ca0653a5-2d88-4506-ab08-4240e655ab20.png?h=552&w=738&webp=1"
-                        lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/ca0653a5-2d88-4506-ab08-4240e655ab20.png?h=552&w=738&webp=1&quot;);">
-                        <p class="slide-p">EP03 댄스스포츠 레슨 조소휘 고수 🔭</p>
-                    </div>
-                    <div class="div-slide">
-                        <img class="slide-img2" data-src="https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1"
-                        lazy="loaded" style="background-image: url(&quot;https://static.cdn.soomgo.com/upload/soomgoLifeAdmin/c59c7d7d-b3dc-47d8-881e-543c75bde446.png?h=552&w=738&webp=1&quot;);">
-                        <p class="slide-p">EP03 댄스스포츠 레슨 조소휘 고수 🔭</p>
-                    </div>
+                    <button type="button" class="prevbutton2"></button>
+                    <button type="button" class="nextbutton2"></button>
                 </div>
             </div>
         </div>
@@ -477,18 +578,47 @@
                 </div>
                 <div class="main7-slider">
                     <div class="slider-wrap">
-                        <div class="slider-img-wrap">
-                            <img class="slider-img" src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1@2x.png?webp=1">
-                        </div>
-                        <ul class="slider-ul">
-                            <li class="slider-btn"><button></button></li>
-                            <li class="slider-btn"><button></button></li>
-                            <li class="slider-btn"><button></button></li>
+                        <ul class="slider4-box">
+                            <li class="slider4-img">
+                                <div class="slider-img-wrap">
+                                    <img class="slider-img" src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-1@2x.png?webp=1">
+                                </div>
+                                <div class="main7-p">
+                                    <p class="main7-pp">고객의 요청서를 무료로 받으세요</p>
+                                </div>
+                            </li>
+                            <li class="slider4-img">
+                                <div class="slider-img-wrap">
+                                    <img class="slider-img" src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-2@2x.png?webp=1">
+                                </div>
+                                <div class="main7-p">
+                                    <p class="main7-pp">조건이 맞는 견적을 보내세요</p>
+                                </div>
+                            </li>
+                            <li class="slider4-img">
+                                <div class="slider-img-wrap">
+                                    <img class="slider-img" src="https://assets.cdn.soomgo.com/images/home/img-main-signup-pro-step-3@2x.png?webp=1">
+                                </div>
+                                <div class="main7-p">
+                                    <p class="main7-pp">채팅, 전화로 빠르게 상담하고 거래하세요</p>
+                                </div>
+                            </li>
                         </ul>
-                        <div class="main7-p">
-                            고객의 요청서를 무료로 받으세요
+                        <div class="slider-btn-wrap">
+                            <ul class="slider-ul">
+                                <li class="slider-btn"><button></button></li>
+                                <li class="slider-btn"><button></button></li>
+                                <li class="slider-btn"><button></button></li>
+                            </ul>
                         </div>
+                        <!-- <ul class="slider-ul">
+                            <li class="slider-btn"><button></button></li>
+                            <li class="slider-btn"><button></button></li>
+                            <li class="slider-btn"><button></button></li>
+                        </ul> -->
                     </div>
+                    <button type="button" class="prevbutton3"></button>
+                    <button type="button" class="nextbutton3"></button>
                 </div>
             </div>
         </div>
